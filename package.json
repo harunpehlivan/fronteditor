@@ -1,0 +1,12 @@
+{
+  "name": "Fronteditor",
+  "version": "1.0.0",
+  "description": "This is simple frontend code editor",
+  "main": "index.js",
+  "author": "AdityaAnanya007",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates | Fronteditor</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://kit.fontawesome.com/d05287f367.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        .searchar{
+            display: flex;
+            font-size: 1.2em;
+            margin-top: 20px;
+            padding: 20px;
+            min-width: 0;
+        }
+        .search{
+            font-size: 1em;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            outline: none;
+            resize: none;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="createmodal">
+        <div class="createform">
+            <div class="cancel" onclick="createnew()" style="cursor:pointer;"><i class="fa-solid fa-xmark"
+                    style="margin-right: 10px;color: #fff;"></i>Close</div>
+            <div class="headcreate">Create New Project</div>
+            <label for="createtext"></label>
+            <textarea name="createtext" id="createtext" rows="1" class="createtext"
+                placeholder="Name of the project"></textarea>
+            <label for="templatesel" class="white">Choose A template</label>
+            <select name="templatesel" id="templatesel" onchange="changetemp()" class="templatesel" style="padding: 5px; margin-top:10px; font-size: 1em;">
+                <option value="Vanilla">Vanilla</option>
+                <option value="React">React</option>
+                <option value="Tailwind">Tailwind CSS</option>
+                <option value="Angularjs">Angular.js</option>
+				<option value="Reactrouter">React Router</option>
+                <option value="Vue">Vue</option>
+            </select>
+            <div class="error" style="color: rgb(255, 107, 49);"></div>
+            <div class="buttons">
+                <div class="createbtnsec">
+                    <div class="createbtn bg-blue-gradient" onclick="createbtnclick()">Create</div>
+                </div>
+                <div class="generaterand bg-blue-gradient" onclick="generatename()">Generate Random Name</div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: -100px;">
+        <div class="templates" id="templates">
+            <div class="header" style="margin-bottom: 10px;">Templates, you can choose from:</div>
+            <a href="/home" style="margin-top: 10px;margin-bottom: 50px;">Back to home</a>
+            <div class="searchar">
+
+                <label for="search">Search:</label>
+                <textarea class="search" rows="1" id="search" name="search" oninput="setSearch()"></textarea>
+            </div>
+            <div class="choose">
+                <div class="template hover_bg-black-gradient" id="reacttemp" onclick="setvalue('React')">
+                    <div class="image"><img src="https://reactjs.org/logo-og.png" alt="React"></div>
+                    <div class="name">React CDN Starter</div>
+                </div>
+                <div class="template hover_bg-black-gradient two" id="vuetemp" onclick="setvalue('Vue')">
+                    <div class="image"><img src="https://www.positivethinking.tech/wp-content/uploads/2021/01/Logo-Vuejs.png" alt="Vue.js"></div>
+                    <div class="name">Vue.js Starter</div>
+                </div>
+                <div class="template hover_bg-black-gradient three" id="tailwindtemp" onclick="setvalue('Tailwind')">
+                    <div class="image"><img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-ar21.png" alt="Tailwind"></div>
+                    <div class="name">TailwindCSS Starter</div>
+                </div>
+                <div class="template hover_bg-black-gradient three" id="angulartemp" onclick="setvalue('Angularjs')">
+                    <div class="image"><img src="https://www.levelaccess.com/wp-content/uploads/2015/08/AngularJS_google.png" alt="Angular"></div>
+                    <div class="name">Angular.js Starter</div>
+                </div>
+                <div class="template hover_bg-black-gradient three" id="reactroutertemp" onclick="setvalue('Reactrouter')">
+                    <div class="image"><img src="https://cdn-media-1.freecodecamp.org/images/1*TKvlTeNqtkp1s-eVB5Hrvg@2x.png" alt="React Router"></div>
+                    <div class="name">React Router Starter</div>
+                </div>
+                <div class="template hover_bg-black-gradient three" id="vanillatemp" onclick="setvalue('Vanilla')">
+                    <div class="image"><img src="https://cdn3.vectorstock.com/i/1000x1000/25/67/set-three-icons-html-css-javascript-vector-26022567.jpg" alt="Html css and Js"></div>
+                    <div class="name">HTML, CSS and JS</div>
+                </div>
+            	                <p style="margin-top: 50px;"><b>I will keep on adding more and more templates, till then you can use the above ones</b></p>
+
+            </div>
+        </div>
+        <div class="" id=""></div>
+    </div>
+    <script src="scripts/templates.js"></script>
+</body>
+</html>
